@@ -68,8 +68,6 @@ def load_image(path, preprocess=True):
         x = preprocess_input(x)
     return x
 
-deprocess_image = config_model.deprocess_image
-
 def grad_cam(input_model, image, cls, layer_name):
     """GradCAM method for visualizing input saliency."""
     y_c = input_model.output[0, cls]
